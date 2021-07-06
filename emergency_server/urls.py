@@ -18,8 +18,10 @@ from django.urls import path, include
 from backend import urls
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import redirect
 
 urlpatterns = [
-    path('', admin.site.urls),
-    path('backend/', include(urls)),
+    path('admin/', admin.site.urls),
+    path('api/', include(urls)),
+    path('', lambda request: redirect('admin/', permanent=True)),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
