@@ -3,6 +3,11 @@ from backend.serializers import LanguageSerializer, CourseSerializer, Vocabulary
 from backend.models import Language, Course, Vocabulary, Senses, Exercise
 from rest_framework import generics,filters
 from django_filters.rest_framework import DjangoFilterBackend, BaseInFilter, NumberFilter
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def my_view(request):
+    return render(request, 'index.html')
 
 
 class LanguageViewSet(ModelViewSet):
