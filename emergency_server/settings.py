@@ -93,9 +93,23 @@ WSGI_APPLICATION = 'emergency_server.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hfdfp6o9xbl0yg61',
+        'USER': 'yem3paflgr4m3ykf',
+        # 'PASSWORD': 'P@$$w0rd1234',
+        'PASSWORD': 'ahfhlb4018nxhduj',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        },
     }
 }
 
