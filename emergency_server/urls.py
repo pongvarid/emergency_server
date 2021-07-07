@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 from django.shortcuts import redirect
 
 urlpatterns = [
+   path('', views.my_view),
     path('admin/', admin.site.urls),
     path('api/', include(urls)),
-    path('', views.my_view ),
+
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
