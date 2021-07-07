@@ -105,7 +105,7 @@ DATABASES = {
         'USER': 'yem3paflgr4m3ykf',
         # 'PASSWORD': 'P@$$w0rd1234',
         'PASSWORD': 'ahfhlb4018nxhduj',
-        'HOST': 'localhost',
+        'HOST': 's465z7sj4pwhp7fn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
         'OPTIONS': {
             "init_command": "SET foreign_key_checks = 0;",
