@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
-class Knoeledge(models.Model):
+class knowledge(models.Model):
     class Meta:
         verbose_name = _("Knowledge")
         verbose_name_plural = _("Knowledge")

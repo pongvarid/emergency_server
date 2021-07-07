@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 
 
-class KnowlwdgeConfig(AppConfig):
+class KnowledgeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'knowlwdge'
+    name = 'knowledge'
     verbose_name = "Knowledge"
 
