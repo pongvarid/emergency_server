@@ -22,8 +22,10 @@ from django.conf.urls.static import static
 from django.shortcuts import redirect
 
 urlpatterns = [
-   path('', views.my_view),
+   path('web/', views.my_view),
     path('admin/', admin.site.urls),
     path('api/', include(urls)),
     path('api/', include(know)),
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+    path('', lambda request: redirect('web/', permanent=True))
+
+ ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
