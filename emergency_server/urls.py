@@ -26,6 +26,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(urls)),
     path('api/', include(know)),
-    path('', lambda request: redirect('web/', permanent=True))
-
  ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
